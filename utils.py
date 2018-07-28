@@ -8,7 +8,8 @@ import numpy as np
 
 
 def batch_index(length, batch_size, n_iter=100, is_shuffle=True):
-    index = range(length)
+    index = np.arange(length)
+    #index = range(length)
     for j in xrange(n_iter):
         if is_shuffle:
             np.random.shuffle(index)
